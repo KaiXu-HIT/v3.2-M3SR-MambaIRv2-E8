@@ -1,0 +1,255 @@
+{
+  "note": "Fill null paths only; x4 DIV2K/test paths are inherited. All LR/depth files must use each dataset filename template. Depth must be generated from that LR input, never HR.",
+  "scales": {
+    "4": {
+      "div2k": {
+        "dataroot_gt": [
+          "/home/BRAIN/xukai/datasets/M3SR/DIV2K/DIV2K_train_HR/DIV2K_train_HR"
+        ],
+        "dataroot_lq": [
+          "/home/BRAIN/xukai/datasets/M3SR/DIV2K/DIV2K_train_LR_bicubic_X4/DIV2K_train_LR_bicubic/X4"
+        ],
+        "dataroot_depth": [
+          "/home/BRAIN/xukai/datasets/M3SR/DIV2K-Depth/DIV2K_train_LR_depth_X4"
+        ],
+        "filename_tmpl": "{}x4",
+        "filename_tmpl_depth": "{}x4"
+      },
+      "flickr2k": {
+        "dataroot_gt": null,
+        "dataroot_lq": null,
+        "dataroot_depth": null,
+        "filename_tmpl": "{}x4",
+        "filename_tmpl_depth": "{}x4"
+      },
+      "validation": {
+        "dataroot_gt": [
+          "/home/BRAIN/xukai/datasets/M3SR/DIV2K/DIV2K_valid_HR/DIV2K_valid_HR"
+        ],
+        "dataroot_lq": [
+          "/home/BRAIN/xukai/datasets/M3SR/DIV2K/DIV2K_valid_LR_bicubic_X4/DIV2K_valid_LR_bicubic/X4"
+        ],
+        "dataroot_depth": [
+          "/home/BRAIN/xukai/datasets/M3SR/DIV2K-Depth/DIV2K_valid_LR_depth_X4"
+        ],
+        "filename_tmpl": "{}x4",
+        "filename_tmpl_depth": "{}x4"
+      },
+      "tests": {
+        "Set5": {
+          "dataroot_gt": [
+            "/home/BRAIN/xukai/datasets/M3SR/Set5/raw/Set5/Set5/original"
+          ],
+          "dataroot_lq": [
+            "/home/BRAIN/xukai/datasets/M3SR/Set5/raw/Set5/Set5/LRbicx4"
+          ],
+          "dataroot_depth": [
+            "/home/BRAIN/xukai/datasets/M3SR/Set5-Depth/X4"
+          ],
+          "filename_tmpl": "{}",
+          "filename_tmpl_depth": "{}"
+        },
+        "Set14": {
+          "dataroot_gt": [
+            "/home/BRAIN/xukai/datasets/M3SR/Set14/HR"
+          ],
+          "dataroot_lq": [
+            "/home/BRAIN/xukai/datasets/M3SR/Set14/LR_bicubic/X4"
+          ],
+          "dataroot_depth": [
+            "/home/BRAIN/xukai/datasets/M3SR/Set14-Depth/X4"
+          ],
+          "filename_tmpl": "{}x4",
+          "filename_tmpl_depth": "{}x4"
+        },
+        "B100": {
+          "dataroot_gt": [
+            "/home/BRAIN/xukai/datasets/M3SR/B100/HR"
+          ],
+          "dataroot_lq": [
+            "/home/BRAIN/xukai/datasets/M3SR/B100/LR_bicubic/X4"
+          ],
+          "dataroot_depth": [
+            "/home/BRAIN/xukai/datasets/M3SR/B100-Depth/X4"
+          ],
+          "filename_tmpl": "{}x4",
+          "filename_tmpl_depth": "{}x4"
+        },
+        "Urban100": {
+          "dataroot_gt": [
+            "/home/BRAIN/xukai/datasets/M3SR/Urban100/HR"
+          ],
+          "dataroot_lq": [
+            "/home/BRAIN/xukai/datasets/M3SR/Urban100/LR_bicubic/X4"
+          ],
+          "dataroot_depth": [
+            "/home/BRAIN/xukai/datasets/M3SR/Urban100-Depth/X4"
+          ],
+          "filename_tmpl": "{}x4",
+          "filename_tmpl_depth": "{}x4"
+        },
+        "Manga109": {
+          "dataroot_gt": [
+            "/home/BRAIN/xukai/datasets/M3SR/Manga109/HR"
+          ],
+          "dataroot_lq": [
+            "/home/BRAIN/xukai/datasets/M3SR/Manga109/LR_bicubic/X4"
+          ],
+          "dataroot_depth": [
+            "/home/BRAIN/xukai/datasets/M3SR/Manga109-Depth/X4"
+          ],
+          "filename_tmpl": "{}_LRBI_x4",
+          "filename_tmpl_depth": "{}_LRBI_x4"
+        }
+      }
+    },
+    "2": {
+      "div2k": {
+        "dataroot_gt": [
+          "/home/BRAIN/xukai/datasets/M3SR/DIV2K/DIV2K_train_HR/DIV2K_train_HR"
+        ],
+        "dataroot_lq": null,
+        "dataroot_depth": null,
+        "filename_tmpl": "{}x2",
+        "filename_tmpl_depth": "{}x2"
+      },
+      "flickr2k": {
+        "dataroot_gt": null,
+        "dataroot_lq": null,
+        "dataroot_depth": null,
+        "filename_tmpl": "{}x2",
+        "filename_tmpl_depth": "{}x2"
+      },
+      "validation": {
+        "dataroot_gt": [
+          "/home/BRAIN/xukai/datasets/M3SR/DIV2K/DIV2K_valid_HR/DIV2K_valid_HR"
+        ],
+        "dataroot_lq": null,
+        "dataroot_depth": null,
+        "filename_tmpl": "{}x2",
+        "filename_tmpl_depth": "{}x2"
+      },
+      "tests": {
+        "Set5": {
+          "dataroot_gt": [
+            "/home/BRAIN/xukai/datasets/M3SR/Set5/raw/Set5/Set5/original"
+          ],
+          "dataroot_lq": null,
+          "dataroot_depth": null,
+          "filename_tmpl": "{}",
+          "filename_tmpl_depth": "{}"
+        },
+        "Set14": {
+          "dataroot_gt": [
+            "/home/BRAIN/xukai/datasets/M3SR/Set14/HR"
+          ],
+          "dataroot_lq": null,
+          "dataroot_depth": null,
+          "filename_tmpl": "{}x2",
+          "filename_tmpl_depth": "{}x2"
+        },
+        "B100": {
+          "dataroot_gt": [
+            "/home/BRAIN/xukai/datasets/M3SR/B100/HR"
+          ],
+          "dataroot_lq": null,
+          "dataroot_depth": null,
+          "filename_tmpl": "{}x2",
+          "filename_tmpl_depth": "{}x2"
+        },
+        "Urban100": {
+          "dataroot_gt": [
+            "/home/BRAIN/xukai/datasets/M3SR/Urban100/HR"
+          ],
+          "dataroot_lq": null,
+          "dataroot_depth": null,
+          "filename_tmpl": "{}x2",
+          "filename_tmpl_depth": "{}x2"
+        },
+        "Manga109": {
+          "dataroot_gt": [
+            "/home/BRAIN/xukai/datasets/M3SR/Manga109/HR"
+          ],
+          "dataroot_lq": null,
+          "dataroot_depth": null,
+          "filename_tmpl": "{}_LRBI_x2",
+          "filename_tmpl_depth": "{}_LRBI_x2"
+        }
+      }
+    },
+    "3": {
+      "div2k": {
+        "dataroot_gt": [
+          "/home/BRAIN/xukai/datasets/M3SR/DIV2K/DIV2K_train_HR/DIV2K_train_HR"
+        ],
+        "dataroot_lq": null,
+        "dataroot_depth": null,
+        "filename_tmpl": "{}x3",
+        "filename_tmpl_depth": "{}x3"
+      },
+      "flickr2k": {
+        "dataroot_gt": null,
+        "dataroot_lq": null,
+        "dataroot_depth": null,
+        "filename_tmpl": "{}x3",
+        "filename_tmpl_depth": "{}x3"
+      },
+      "validation": {
+        "dataroot_gt": [
+          "/home/BRAIN/xukai/datasets/M3SR/DIV2K/DIV2K_valid_HR/DIV2K_valid_HR"
+        ],
+        "dataroot_lq": null,
+        "dataroot_depth": null,
+        "filename_tmpl": "{}x3",
+        "filename_tmpl_depth": "{}x3"
+      },
+      "tests": {
+        "Set5": {
+          "dataroot_gt": [
+            "/home/BRAIN/xukai/datasets/M3SR/Set5/raw/Set5/Set5/original"
+          ],
+          "dataroot_lq": null,
+          "dataroot_depth": null,
+          "filename_tmpl": "{}",
+          "filename_tmpl_depth": "{}"
+        },
+        "Set14": {
+          "dataroot_gt": [
+            "/home/BRAIN/xukai/datasets/M3SR/Set14/HR"
+          ],
+          "dataroot_lq": null,
+          "dataroot_depth": null,
+          "filename_tmpl": "{}x3",
+          "filename_tmpl_depth": "{}x3"
+        },
+        "B100": {
+          "dataroot_gt": [
+            "/home/BRAIN/xukai/datasets/M3SR/B100/HR"
+          ],
+          "dataroot_lq": null,
+          "dataroot_depth": null,
+          "filename_tmpl": "{}x3",
+          "filename_tmpl_depth": "{}x3"
+        },
+        "Urban100": {
+          "dataroot_gt": [
+            "/home/BRAIN/xukai/datasets/M3SR/Urban100/HR"
+          ],
+          "dataroot_lq": null,
+          "dataroot_depth": null,
+          "filename_tmpl": "{}x3",
+          "filename_tmpl_depth": "{}x3"
+        },
+        "Manga109": {
+          "dataroot_gt": [
+            "/home/BRAIN/xukai/datasets/M3SR/Manga109/HR"
+          ],
+          "dataroot_lq": null,
+          "dataroot_depth": null,
+          "filename_tmpl": "{}_LRBI_x3",
+          "filename_tmpl_depth": "{}_LRBI_x3"
+        }
+      }
+    }
+  }
+}

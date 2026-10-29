@@ -33,7 +33,8 @@ class E4UDRMambaIRv2Model(UDRMambaIRv2Model):
             # net_g and the E4 optimizer in both phases.
             options = deepcopy(opt['network_g'])
             for key in ('type', 'uncertainty_mode', 'local_alpha_init',
-                        'alpha_max', 'alpha_init', 'projection_std'):
+                        'alpha_max', 'alpha_init', 'projection_std',
+                        'performance_scaling'):
                 options.pop(key, None)
             self.rgb_teacher = MambaIRv2(**options).to(self.device).eval()
             state = torch.load(opt['train']['rgb_teacher_checkpoint'], map_location='cpu')
@@ -82,7 +83,9 @@ class E4UDRMambaIRv2Model(UDRMambaIRv2Model):
         stats = dict(l_pix=l_pix, l_alpha=l_alpha, **net.udr_stats)
         if net.uncertainty_mode == 'learned_error':
             with torch.no_grad():
-                target = normalized_rgb_error(self.rgb_teacher(self.lq), self.gt)
+                # E8: preserve the E2 target formula using this run's actual scale.
+                target = normalized_rgb_error(self.rgb_teacher(self.lq), self.gt,
+                                              scale=net.upscale)
             if net.uncertainty_map.shape != target.shape:
                 raise RuntimeError('E4 uncertainty and RGB teacher error are misaligned.')
             l_u = F.l1_loss(net.uncertainty_map, target)

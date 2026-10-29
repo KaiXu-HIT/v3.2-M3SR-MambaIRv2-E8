@@ -1,0 +1,89 @@
+{
+  "note": "Fill source URL, training data, checkpoint, original architecture config and local factory. enable only measured public-weight/unified-reproduction entries; all seven are needed for full comparison.",
+  "models": [
+    {
+      "name": "MambaIR",
+      "enabled": false,
+      "training_data": null,
+      "scale": 4,
+      "source_url": null,
+      "checkpoint": null,
+      "config": null,
+      "factory": "scripts.udr.compare_e8_public:basicsr_factory",
+      "method": "public_weights",
+      "training_recipe": null
+    },
+    {
+      "name": "MambaIRv2",
+      "enabled": false,
+      "training_data": null,
+      "scale": 4,
+      "source_url": null,
+      "checkpoint": null,
+      "config": null,
+      "factory": "scripts.udr.compare_e8_public:basicsr_factory",
+      "method": "public_weights",
+      "training_recipe": null
+    },
+    {
+      "name": "SwinIR",
+      "enabled": false,
+      "training_data": null,
+      "scale": 4,
+      "source_url": null,
+      "checkpoint": null,
+      "config": null,
+      "factory": "scripts.udr.compare_e8_public:basicsr_factory",
+      "method": "public_weights",
+      "training_recipe": null
+    },
+    {
+      "name": "HAT",
+      "enabled": false,
+      "training_data": null,
+      "scale": 4,
+      "source_url": null,
+      "checkpoint": null,
+      "config": null,
+      "factory": "scripts.udr.compare_e8_public:basicsr_factory",
+      "method": "public_weights",
+      "training_recipe": null
+    },
+    {
+      "name": "SRFormer",
+      "enabled": false,
+      "training_data": null,
+      "scale": 4,
+      "source_url": null,
+      "checkpoint": null,
+      "config": null,
+      "factory": "scripts.udr.compare_e8_public:basicsr_factory",
+      "method": "public_weights",
+      "training_recipe": null
+    },
+    {
+      "name": "RCAN",
+      "enabled": false,
+      "training_data": null,
+      "scale": 4,
+      "source_url": null,
+      "checkpoint": null,
+      "config": null,
+      "factory": "scripts.udr.compare_e8_public:basicsr_factory",
+      "method": "public_weights",
+      "training_recipe": null
+    },
+    {
+      "name": "EDSR",
+      "enabled": false,
+      "training_data": null,
+      "scale": 4,
+      "source_url": null,
+      "checkpoint": null,
+      "config": null,
+      "factory": "scripts.udr.compare_e8_public:basicsr_factory",
+      "method": "public_weights",
+      "training_recipe": null
+    }
+  ]
+}

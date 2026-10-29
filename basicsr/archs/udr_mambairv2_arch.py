@@ -76,14 +76,18 @@ class DepthResidualExpert(nn.Module):
 
 @ARCH_REGISTRY.register()
 class UDRMambaIRv2(MambaIRv2):
-    def __init__(self, alpha_max=0.1, alpha_init=0.01, projection_std=1e-3, **kwargs):
+    def __init__(self, alpha_max=0.1, alpha_init=0.01, projection_std=1e-3,
+                 performance_scaling=False, **kwargs):
         defaults = dict(in_chans=3, upscale=4, upsampler='pixelshuffle',
                         embed_dim=174, depths=(6,) * 6, num_heads=(6,) * 6,
                         d_state=16, inner_rank=64, num_tokens=128)
         for key, value in defaults.items():
             kwargs.setdefault(key, value)
-        if kwargs['in_chans'] != 3 or kwargs['upscale'] != 4 or kwargs['upsampler'] != 'pixelshuffle':
-            raise ValueError('UDR requires the original classical RGB x4 pixelshuffle head.')
+        # E8 explicitly opts into the existing x2/x3 PixelShuffle heads.
+        # Historical E0-E7 callers retain the original x4-only contract.
+        allowed_scales = (2, 3, 4) if performance_scaling else (4,)
+        if kwargs['in_chans'] != 3 or kwargs['upscale'] not in allowed_scales or kwargs['upsampler'] != 'pixelshuffle':
+            raise ValueError('UDR requires RGB PixelShuffle; x2/x3 need explicit E8 performance_scaling.')
         if len(kwargs['depths']) != 6 or any(d < 1 for d in kwargs['depths']):
             raise ValueError('UDR requires six nonempty ASSBs; ambiguity is read from stages 4/5/6.')
         if kwargs['num_tokens'] < 2:
